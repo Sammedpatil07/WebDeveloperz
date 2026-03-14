@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Expense Tracker</title>
+    
+    <style>
+      
+        body {
+            background-color: #d7dae0; 
+            font-family: Arial, sans-serif; 
+            margin: 0;
+            padding: 40px;
+        }
+         h1{
+            display: flex;
+            justify-content: center;
+        }
+
+       
+        .dashboard {
+            display: flex; 
+            gap: 20px; 
+            max-width: 800px; 
+            margin: 0 auto; 
+        }
+
+        
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column; 
+            gap: 20px; 
+        }
+
+       
+        .card {
+            background-color: #ffffff; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+
+       
+        h2 {
+            margin: 0 0 5px 0; 
+            color: #333333;
+        }
+        p {
+            margin: 0;
+            color: #777777; 
+        }
+
+       
+        .simple-circle {
+            width: 150px;
+            height: 150px;
+            background-color: #8b5cf6; 
+            border-radius: 50%;
+            color: white;
+            
+           
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+            
+            margin: 0 auto 20px auto; 
+        }
+
+        
+        .list-item {
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px 0;
+            border-bottom: 1px solid #eeeeee; 
+        }
+
+        
+        .progress-bar-background {
+            background-color: #eeeeee;
+            height: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        .progress-bar-fill {
+            background-color: #84cc16;
+            border-radius: 5px;
+            width: 60%; 
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <h1>My Expense Tracker</h1>
+
+<div class="dashboard">
+
+    <div class="column">
+        
+        <div class="card">
+            <div class="simple-circle">
+                <h2>$120.00</h2>
+                <p style="color: white;">Assets</p>
+            </div>
+            
+            <div class="list-item">
+                <span>Cash</span>
+                <strong>$ 90.00</strong>
+            </div>
+            <div class="list-item">
+                <span>Investment</span>
+                <strong>$ 40.00</strong>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Plan Summary</h2>
+            <p style="margin-bottom: 15px;">You have $400 left.</p>
+
+            <span>Income</span>
+            <div class="progress-bar-background">
+                <div class="progress-bar-fill" style="width: 25%; background-color: #84cc16;"></div>
+            </div>
+
+            <span>Expenses</span>
+            <div class="progress-bar-background">
+                <div class="progress-bar-fill" style="width: 70%; background-color: #f97316;"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="column">
+        
+        <div class="card">
+            <p>Cash</p>
+            <h2>$ 100.00</h2>
+            
+            <div class="list-item" style="margin-top: 20px; border: none;">
+                <span>💸 February</span>
+                <strong>$ 20.00</strong>
+            </div>
+        </div>
+
+        <div class="card">
+            <p>Loans</p>
+            <h2>$ 10.00</h2>
+            
+            <div class="list-item" style="margin-top: 20px; border: none;">
+                <span>📄 Student Loans</span>
+                <strong style="color: #f97316;">$ 12.00</strong>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script>
+    var a=10
+ console.log(a+=10)
+
+ const h="40"
+ const h1=40
+ console.log(h==h1) //true
+ console.log(h===h1) //false
+
+ //AND && operator :Both condition is true then the output is also true
+var isSubscribed=true
+let subscription=299
+
+console.log(isSubscribed && subscription >399)
+console.log(isSubscribed || subscription >399)
+
+console.log(!isSubscribed)
+
+// Conditional statement
+let age=19
+if(age>=18){
+    console.log("elligible")
+    alert('You are elligible')
+}
+
+</script>
+
+</body>
+</html>
