@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let luckyno =Math.floor(Math.random()*6)+1
+         while(true){
+        var userinput=prompt("Enter your favourite number from 1 to 6 :")
+        console.log(userinput)
+       
+        if(userinput==luckyno){
+            alert('You have won')
+            break
+
+        }else if(userinput>6){
+            alert('You duffer I said only 1 to 6 numbers ')
+        }
+        
+        
+        
+        else{
+            alert('Better luck next time')
+        }
+    }
+    </script>
+</body>
+</html>

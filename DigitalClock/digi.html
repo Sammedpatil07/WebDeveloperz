@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        align-items: center;
+        color: aliceblue;
+        height: 100vh;
+
+
+    }
+    .clock{
+        background-color: grey;
+        border: 2px solid white;
+        height: 100px;
+        width: 200px;
+        border-radius: 40px;
+        text-align: center;
+        align-items: center;
+        box-shadow: 0 0 15px white;
+
+
+
+    }
+    #time{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-self: center;
+        color: aliceblue;
+        gap: 20px;
+        padding-bottom: 20px;
+        padding-top: 10px;
+
+
+    }
+    #date{
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+
+
+    }
+</style>
+<body>
+    <div class="clock">
+        <div id="time">
+            00:00:00
+        </div>
+        <div id="date">
+            Monday, 2 January 2026
+        </div>
+    </div>
+
+
+
+
+    <script>
+        //task to show the current time and date
+        function showClock(){
+
+
+            //Date object
+            let now = new Date()
+            let hours =now.getHours() //24hrs formate
+            let minutes =now.getMinutes() //24hrs formate
+            let seconds =now.getSeconds()
+
+            
+
+
+            //check whether its am or pm
+            let ampm =hours>=12 ? "PM":"AM"
+
+            //conversion 24hrs into 12hrs formate
+
+
+
+            if(hours > 12){
+                hours = hours-12;
+            }
+
+            if(hours==0){
+                hours = 12
+            }
+
+            //logic for minutes and seconds
+            if(hours <10){
+                hours = '0'+hours
+
+            }
+            
+            if(minutes <10){
+                minutes = '0' + minutes
+            }
+
+            if(seconds < 10 ){
+                seconds = '0'+seconds
+            }
+
+
+            //connection js between html
+            document.getElementById('time').innerHTML = hours + ':' +minutes +':'+seconds+''+ampm
+
+
+            //Get day and month and also year
+            let day =now.getDay()
+            let date =now.getDate()
+            let month = now.getMonth()
+            let year = now.getFullYear()
+
+            document.getElementById('date').innerHTML = date +  " " +year
+
+
+
+            setInterval(showClock,1000)
+
+        }
+
+        showClock()
+
+    </script>
+    
+</body>
+</html>

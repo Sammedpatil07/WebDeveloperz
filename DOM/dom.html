@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="abc">Hello DOM</h2>
+    <h2 class="abc1">Hello Sammed</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit modi voluptatibus, doloribus eum tenetur ducimus quasi nobis recusandae, quidem dicta ex veritatis obcaecati corporis facilis? Temporibus impedit repudiandae tenetur eligendi.</p>
+
+    <h3 id="div">Welcome to javascript</h3>
+    <button onclick="update()">Submit</button>
+    <script>
+
+        //getElemetById('')
+        const greet = document.getElementById('abc');
+        console.log(greet);
+
+        //getelemetByClassName('')
+        const greet1 = document.getElementsByClassName('abc1');
+        console.log(greet1)
+
+        //getElementByTagName('')
+        const tg = document.getElementsByTagName('p')
+        console.log(tg);
+
+        //Updateing the text content using DOM
+        // const heading = document.getElementById('div');
+        // console.log(heading)
+        // console.log(heading.textContent);
+
+        function update(){
+            const heading = document.getElementById('div')
+            heading.textContent="Welcome to the DOM"
+        }
+
+    </script>
+</body>
+</html>
