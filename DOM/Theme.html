@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #light{
+        height: 50px;
+        width: 100px;
+        background-color: azure;
+        color: black;
+        border: 2px solid black;
+        border-radius: 20px;
+        text-align: center;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #dark{
+        height: 50px;
+        width: 100px;
+        background-color: black;
+        color: white;
+        border: 2px solid rgb(255, 0, 0);
+        border-radius: 20px;
+        text-align: center;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <div id="main">
+    <div id="light">Light mode</div>
+    <div id="dark">dark mode</div>
+    </div>
+
+
+
+    <script>
+        function lightmode(){
+            const theme1 = document.getElementById("main")
+            theme1.style.backgroundColor ="white"
+        }
+
+        function darkmode(){
+            const theme2 =document.getElementById("main")
+            theme2.style.backgroundColor = "black"
+        }
+
+        function autoTheme(){
+            const hours = new Date().getHours()
+            const day = new Date().getDay()
+
+            if(hours >=5 && hours<=18 ){
+                lightmode()
+            }
+            else{
+                darkmode()
+            }
+        }
+        autoTheme()
+
+        setInterval(autoTheme ,60000)
+    </script>
+</body>
+
+</html>
